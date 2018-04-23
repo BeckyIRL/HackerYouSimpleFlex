@@ -1,5 +1,78 @@
+/*██████████ GLOBAL ██████████*/
 @import "setup";
-@import "utils";
+@import "utils"; //empty
+@import "colours";
 @import "typography";
 @import "components/header";
-@import "components/footer";
+@import "components/footer"; //empty
+
+//██████████ STYLE GUIDE ██████████//
+
+
+/*░░░░░ LINKS ░░░░░*/
+@mixin button {
+    border: solid 4px $white;
+    color: $lightGrey;
+    padding: 20px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    &:hover {
+        background: $white
+    }
+}
+a {
+    color: $white;
+    text-decoration: none;
+    &.active {
+        color: $red;
+    }
+    &.button {
+        @include button;
+    }
+}
+
+/*██████████ LAYOUT ██████████*/
+.wrapper {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.flex {
+    display: flex;
+}
+* {
+    margin: 0 0;
+}
+
+//██████████ ABOUT ██████████//
+.about {
+    color: $fontLight;
+    padding-top: 75px;
+    p {
+        max-width: 570px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 80px;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 170px;
+            border-bottom: 1px solid $fontLight;
+            left: calc(50% - 85px);
+            bottom: -30px;
+        }
+    }
+    .flex {
+        
+        .aboutDetails {
+            background: $lightGrey2;
+            border-bottom: solid 10px $yellow;
+            height: 50px;
+            width: 30%;
+        }
+    }
+    
+}

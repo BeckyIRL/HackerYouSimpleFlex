@@ -1,0 +1,41 @@
+//░░░░░ TYPOGRAPHY ░░░░░//
+$raleway: Raleway, Helvetica, Arial, sans-serif;
+$openSans: "Open Sans", Helvetica, Arial, sans-serif;
+body {
+    font-family: $raleway;
+    font-weight: 300;
+    color: $lightGrey;
+    background-color: $lightGrey;
+}
+p {
+    line-height: 1.5;
+    font-size: 20px;
+}
+@mixin underline {
+    content: "";
+    background: $fontLight;
+    width: 170px;
+    height: 1px;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 80px;
+    font-weight: 300;
+    color: $white;
+    line-height: 65px;
+    margin-bottom: 30px; //DUP?
+}
+h1 span {
+    font-weight: 700;
+    color: $lightGrey;
+}
+h2 {
+    font-size: 60px;
+    font-weight: 300;
+    color: $white;
+    text-align: center;
+    margin-bottom: 30px; //DUP?
+}
