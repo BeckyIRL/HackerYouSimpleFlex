@@ -45,12 +45,12 @@ a {
 * {
     margin: 0 0;
 }
-
 //██████████ ABOUT ██████████//
 .about {
     color: $fontLight;
     padding-top: 75px;
-    p {
+    padding-bottom: 100px;
+    > p {
         max-width: 570px;
         text-align: center;
         margin: 0 auto;
@@ -66,13 +66,42 @@ a {
         }
     }
     .flex {
-        
+        flex-flow: row;
+        justify-content: space-between;
         .aboutDetails {
             background: $lightGrey2;
             border-bottom: solid 10px $yellow;
-            height: 50px;
-            width: 30%;
+            width: 31.6%;
+            padding: 50px 40px;
+            img {
+                margin: 0 auto;
+                display: block;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 16px;
+                text-align: center;
+            }
+            &:nth-last-of-type(2){
+                border-bottom: solid 10px $red;
+            }
+            &:nth-of-type(3){
+                border-bottom: solid 10px $green;
+            }
         }
     }
     
 }
+//██████████ SKILLS ██████████//
+.skills {
+    background: $darkGrey;
+    color: $fontLight;
+    div > p {
+        &:after {
+        include: underlineParagraph;
+        }
+    }
+}
+
+//YOU ARE STYLING PARAGRAPH

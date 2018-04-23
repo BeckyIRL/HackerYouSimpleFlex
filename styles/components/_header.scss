@@ -65,22 +65,12 @@ header {
             bottom: 0px;
             width: 100%;
             &:after {
-                content: "";
-                position: absolute;
-                right: calc(50% - 40px);
-                display: inline-block;
-                border-style: solid;
-                border-width: 25px 40px 0 0px;
-                border-color: $yellow2 transparent transparent transparent;
+                @include triangleR;
+                border-color: $yellow transparent transparent transparent;
             }
             &:before {
-                content: "";
-                position: absolute;
-                left: calc(50% - 40px);
-                display: inline-block;
-                border-style: solid;
-                border-width: 25px 0px 0 40px;
-                border-color: $yellow transparent transparent transparent;
+                @include triangleL;
+                border-color: $yellow2 transparent transparent transparent;
             }
         }
     }

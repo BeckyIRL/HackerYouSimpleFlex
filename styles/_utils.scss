@@ -1,0 +1,16 @@
+@mixin triangleL {
+    content: "";
+    position: absolute;
+    right: calc(50% - 40px);
+    display: inline-block;
+    border-style: solid;
+    border-width: 25px 40px 0 0px;
+}
+@mixin triangleR {
+    content: "";
+    position: absolute;
+    left: calc(50% - 40px);
+    display: inline-block;
+    border-style: solid;
+    border-width: 25px 0px 0 40px;
+}
