@@ -1,9 +1,9 @@
 /*██████████ GLOBAL ██████████*/
 @import "setup";
-@import "utils"; //empty
 @import "colours";
+@import "utils"; //empty
 @import "typography";
-@import "components/header";
+
 @import "components/footer"; //empty
 
 //██████████ STYLE GUIDE ██████████//
@@ -45,24 +45,16 @@ a {
 * {
     margin: 0 0;
 }
+/*██████████ HEADER ██████████*/
+@import "components/header";
 //██████████ ABOUT ██████████//
 .about {
     color: $fontLight;
     padding-top: 75px;
     padding-bottom: 100px;
-    > p {
-        max-width: 570px;
-        text-align: center;
-        margin: 0 auto;
-        position: relative;
-        margin-bottom: 80px;
+    .description {
         &:after {
-            content: "";
-            position: absolute;
-            width: 170px;
-            border-bottom: 1px solid $fontLight;
-            left: calc(50% - 85px);
-            bottom: -30px;
+            border-bottom: 1px solid #494949;
         }
     }
     .flex {
@@ -71,7 +63,8 @@ a {
         .aboutDetails {
             background: $lightGrey2;
             border-bottom: solid 10px $yellow;
-            width: 31.6%;
+            max-width: 370px;
+            margin-right: 30px;
             padding: 50px 40px;
             img {
                 margin: 0 auto;
@@ -88,6 +81,7 @@ a {
             }
             &:nth-of-type(3){
                 border-bottom: solid 10px $green;
+                margin-right: 0px;
             }
         }
     }
@@ -97,11 +91,94 @@ a {
 .skills {
     background: $darkGrey;
     color: $fontLight;
-    div > p {
+    padding: 100px 0 95px;
+    .description {
         &:after {
-        include: underlineParagraph;
+            border-bottom: 1px solid #3a3a3a;
         }
     }
+    .skillSet {
+        text-align: center;
+        flex-flow: row;
+        justify-content: space-between;
+        div {
+            max-width: 270px;
+            margin-right: 30px;
+            img {
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 16px;
+                font-weight: 300;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+    
 }
-
-//YOU ARE STYLING PARAGRAPH
+//██████████ “ QUOTE ” ██████████//
+.quote {
+    background: $gradientRed;
+    position: relative;
+    padding: 90px 0;
+    .quoteContain {
+        max-width: 570px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        p {
+            color: $white;
+            font-size: 40px;
+            line-height: 55px;
+        }
+        &:after {
+            content: "”";
+            position: absolute;
+            font-size: 140px;
+            color: $white;
+            font-weight: 700;
+            top: -45px;
+            right: -100px;
+        }
+        &:before {
+            content: "“";
+            position: absolute;
+            font-size: 140px;
+            color: $white;
+            font-weight: 700;
+            top: -45px;
+            left: -100px;
+        }
+        
+    }
+    .triangle {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            &:after {
+                @include triangleR;
+                border-color: $red transparent transparent transparent;
+            }
+            &:before {
+                @include triangleL;
+                border-color: $red2 transparent transparent transparent;
+            }
+        }
+}
+//██████████ LATEST PROJECT ██████████//
+.latestProject {
+    padding-top: 75px;
+    color: $fontLight;
+    .description {
+        &:after {
+            border-bottom: 1px solid #494949;
+        }
+    }
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+}

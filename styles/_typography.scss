@@ -12,14 +12,23 @@ p {
     font-size: 20px;
 }
 @mixin underline {
-            content: "";
-            position: absolute;
-            width: 170px;
-            border-bottom: 1px solid $fontLight;
-            left: calc(50% - 85px);
-            bottom: -30px;
-        }
-h1, h2, h4, h5, h6 {
+    max-width: 570px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 80px;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 170px;
+        left: calc(50% - 85px);
+        bottom: -30px;
+    }
+}
+.description {
+    @include underline;
+}
+h1, h2 {
     text-transform: uppercase;
 }
 h1 {
@@ -47,4 +56,10 @@ h3 {
     text-align: center;
     color: $white;
     margin-bottom: 15px;
+}
+h4 {
+    font-size: 60px;
+    line-height: 55px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }

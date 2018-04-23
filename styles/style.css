@@ -147,7 +147,20 @@ p {
   line-height: 1.5;
   font-size: 20px; }
 
-h1, h2, h4, h5, h6 {
+.description {
+  max-width: 570px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 80px; }
+  .description:after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    left: calc(50% - 85px);
+    bottom: -30px; }
+
+h1, h2 {
   text-transform: uppercase; }
 
 h1 {
@@ -176,6 +189,44 @@ h3 {
   color: #ffffff;
   margin-bottom: 15px; }
 
+h4 {
+  font-size: 60px;
+  line-height: 55px;
+  font-weight: 700;
+  margin-bottom: 20px; }
+
+/*░░░░░ LINKS ░░░░░*/
+a {
+  color: #ffffff;
+  text-decoration: none; }
+  a.active {
+    color: #ff6f6f; }
+  a.button {
+    border: solid 4px #ffffff;
+    color: #343434;
+    padding: 20px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block; }
+    a.button:hover {
+      background: #ffffff; }
+
+/*██████████ LAYOUT ██████████*/
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+* {
+  margin: 0 0; }
+
+/*██████████ HEADER ██████████*/
 header {
   margin-bottom: 25px;
   background: -webkit-gradient(linear, left top, right top, from(#fbcf61), color-stop(50%, #fbcf61), color-stop(50%, #f3c95e), to(#f3c95e));
@@ -228,9 +279,6 @@ header {
     max-width: 500px; }
     .mainHeader .slide1 .headerIntro p {
       margin-bottom: 50px; }
-  .mainHeader .slide1 img {
-    overflow: hidden;
-    width: 100%; }
   .mainHeader .slide1 .triangle {
     position: absolute;
     bottom: 0px;
@@ -252,54 +300,12 @@ header {
       border-width: 25px 40px 0 0px;
       border-color: #f3c95e transparent transparent transparent; }
 
-/*░░░░░ LINKS ░░░░░*/
-a {
-  color: #ffffff;
-  text-decoration: none; }
-  a.active {
-    color: #ff6f6f; }
-  a.button {
-    border: solid 4px #ffffff;
-    color: #343434;
-    padding: 20px 20px;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    display: inline-block; }
-    a.button:hover {
-      background: #ffffff; }
-
-/*██████████ LAYOUT ██████████*/
-.wrapper {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 30px; }
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-* {
-  margin: 0 0; }
-
 .about {
   color: #989898;
   padding-top: 75px;
   padding-bottom: 100px; }
-  .about > p {
-    max-width: 570px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: 80px; }
-    .about > p:after {
-      content: "";
-      position: absolute;
-      width: 170px;
-      border-bottom: 1px solid #989898;
-      left: calc(50% - 85px);
-      bottom: -30px; }
+  .about .description:after {
+    border-bottom: 1px solid #494949; }
   .about .flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -311,7 +317,8 @@ a {
     .about .flex .aboutDetails {
       background: #3e3e3e;
       border-bottom: solid 10px #fbcf61;
-      width: 31.6%;
+      max-width: 370px;
+      margin-right: 30px;
       padding: 50px 40px; }
       .about .flex .aboutDetails img {
         margin: 0 auto;
@@ -324,10 +331,94 @@ a {
       .about .flex .aboutDetails:nth-last-of-type(2) {
         border-bottom: solid 10px #ff6f6f; }
       .about .flex .aboutDetails:nth-of-type(3) {
-        border-bottom: solid 10px #a8d164; }
+        border-bottom: solid 10px #a8d164;
+        margin-right: 0px; }
 
 .skills {
   background: #242424;
+  color: #989898;
+  padding: 100px 0 95px; }
+  .skills .description:after {
+    border-bottom: 1px solid #3a3a3a; }
+  .skills .skillSet {
+    text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .skills .skillSet div {
+      max-width: 270px;
+      margin-right: 30px; }
+      .skills .skillSet div img {
+        margin-bottom: 30px; }
+      .skills .skillSet div p {
+        font-size: 16px;
+        font-weight: 300; }
+      .skills .skillSet div:last-of-type {
+        margin-right: 0; }
+
+.quote {
+  background: -webkit-gradient(linear, left top, right top, from(#ff6f6f), color-stop(50%, #ff6f6f), color-stop(50%, #f76c6c), to(#f76c6c));
+  background: -webkit-linear-gradient(left, #ff6f6f 0%, #ff6f6f 50%, #f76c6c 50%, #f76c6c 100%);
+  background: -o-linear-gradient(left, #ff6f6f 0%, #ff6f6f 50%, #f76c6c 50%, #f76c6c 100%);
+  background: linear-gradient(90deg, #ff6f6f 0%, #ff6f6f 50%, #f76c6c 50%, #f76c6c 100%);
+  position: relative;
+  padding: 90px 0; }
+  .quote .quoteContain {
+    max-width: 570px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; }
+    .quote .quoteContain p {
+      color: #ffffff;
+      font-size: 40px;
+      line-height: 55px; }
+    .quote .quoteContain:after {
+      content: "”";
+      position: absolute;
+      font-size: 140px;
+      color: #ffffff;
+      font-weight: 700;
+      top: -45px;
+      right: -100px; }
+    .quote .quoteContain:before {
+      content: "“";
+      position: absolute;
+      font-size: 140px;
+      color: #ffffff;
+      font-weight: 700;
+      top: -45px;
+      left: -100px; }
+  .quote .triangle {
+    position: absolute;
+    bottom: 0px;
+    width: 100%; }
+    .quote .triangle:after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 40px);
+      display: inline-block;
+      border-style: solid;
+      border-width: 25px 0px 0 40px;
+      border-color: #ff6f6f transparent transparent transparent; }
+    .quote .triangle:before {
+      content: "";
+      position: absolute;
+      right: calc(50% - 40px);
+      display: inline-block;
+      border-style: solid;
+      border-width: 25px 40px 0 0px;
+      border-color: #f76c6c transparent transparent transparent; }
+
+.latestProject {
+  padding-top: 75px;
   color: #989898; }
-  .skills div > p:after {
-    include: underlineParagraph; }
+  .latestProject .description:after {
+    border-bottom: 1px solid #494949; }
+  .latestProject img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
