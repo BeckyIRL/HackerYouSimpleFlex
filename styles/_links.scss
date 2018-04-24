@@ -1,0 +1,54 @@
+/*░░░░░ LINKS ░░░░░*/
+@mixin button {
+    border: solid 4px $white;
+    color: $lightGrey;
+    padding: 20px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+a.button:hover {
+        background: $white;
+    }
+a {
+    color: $white;
+    text-decoration: none;
+    &.active {
+        color: $red;
+    }
+    &:hover {
+        color: $red;
+    }
+    &.button {
+        @include button;
+    }
+}
+.socialIcon {
+    color: #FFF;
+    width: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    display: block;
+    &:last-child {
+        margin-right: 0px
+    }
+    &:hover {
+        transform: scale(1.1);
+        color: $white;
+    }
+}
+.threeSocial {
+                padding: 30px 0;
+                ul {
+                    max-width: 110px;
+                    margin: 0 auto;
+                    li {
+                        float: left;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }

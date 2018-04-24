@@ -155,26 +155,26 @@ img {
 ul {
   list-style: none; }
 
+.linkedIn {
+  background: #00649b; }
+
 .facebook {
   background: #507cbe; }
 
 .twitter {
   background: #00abef; }
 
-.pinterest {
-  background: #ce1f20; }
+.flickr {
+  background: #ff0084; }
 
 .dribbble {
   background: #f76799; }
 
-.flickr {
-  background: #ff0084; }
+.pinterest {
+  background: #ce1f20; }
 
 .googleplus {
   background: #cb4437; }
-
-.linkedIn {
-  background: #00649b; }
 
 body {
   font-family: Raleway, Helvetica, Arial, sans-serif;

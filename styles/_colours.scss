@@ -1,18 +1,17 @@
 //░░░░░ COLOURS ░░░░░//
-$green: #a8d164;
-$green2: #a3ca61;
 $red: #ff6f6f;
 $red2: #f76c6c;
+$green: #a8d164;
+$green2: #a3ca61;
 $yellow: #fbcf61;
 $yellow2: #f3c95e;
 $white: #ffffff;
 $white2: #fafafa;
-$lightGrey: #343434;
+$fontLight: #989898;
+$lightGrey: #343434; //TODO: merge colours
 $lightGrey2: #3e3e3e;
 $darkGrey: #242424;
 $darkGrey2: #2f2f2f;
-$fontDark: #343434;
-$fontLight: #989898;
 
 //░░░░░ GRADIENTS ░░░░░//
 $gradientWhite: linear-gradient(90deg, $white 0%, $white 50%, $white2 50%, $white2 100%);
@@ -21,24 +20,24 @@ $gradientRed: linear-gradient(90deg, $red 0%, $red 50%, $red2 50%, $red2 100%);
 $gradientGreen: linear-gradient(90deg, $green 0%, $green 50%, $green2 50%, $green2 100%);
 
 //░░░░░ SOCIAL ░░░░░//
+.linkedIn {
+    background: #00649b;
+}
 .facebook {
     background: #507cbe;
 }
 .twitter {
     background: #00abef;
 }
-.pinterest {
-    background: #ce1f20;
+.flickr {
+    background: #ff0084;
 }
 .dribbble {
     background: #f76799;
 }
-.flickr {
-    background: #ff0084;
+.pinterest {
+    background: #ce1f20;
 }
 .googleplus {
     background: #cb4437;
-}
-.linkedIn {
-    background: #00649b;
 }
