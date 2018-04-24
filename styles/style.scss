@@ -4,10 +4,7 @@
 @import "utils";
 @import "typography";
 @import "links";
-
 @import "components/footer"; //empty
-
-//██████████ STYLE GUIDE ██████████//
 
 /*██████████ HEADER ██████████*/
 @import "components/header";
@@ -269,7 +266,7 @@
     }
     
 }
-
+//██████████ BLOG ██████████//
 .blog {
     background: $darkGrey;
     color: $fontLight;
@@ -282,20 +279,19 @@
     }
     .blogRoll {
         margin-bottom: 40px;
-        flex-flow: row;
+        display: grid;
+        grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+        grid-template-areas: "post1 post2" "post1 post3";
+        grid-gap: 30px;
         .blogPost {
             background: $lightGrey;
-            width: calc(50% - 15px);
-            padding-bottom: 30px;
-            border-bottom: solid 10px $yellow;
-            margin-right: 30px;
-            margin-bottom: 30px;
             img {
-                margin-bottom: 30px;
-                width: 100%;
             }
             .blogPostDesc {
                 padding: 0 30px;
+                h4 {
+                    margin-top: 30px;
+                }
                 .blogTimeStamp {
                     text-transform: uppercase;
                     font-family: $openSans;
@@ -307,17 +303,42 @@
                 .blogPostSummary {
                     font-size: 16px;
                 }
+                .threeSocial {
+                    padding-bottom: 0;
+                }
             }
             &:first-child {
                 flex-grow: 2;
+                grid-area: post1;
+                border-bottom: solid 10px $yellow;
             }
             &:nth-child(2) {
-                border-bottom: solid 10px $red;
+                border-right: solid 10px $red;
                 margin-right: 0;
+                grid-area: post2;
+                img {
+                    float: left;
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+                .blogPostDesc {
+                    float: right;
+                    width: 50%;
+                }
             }
             &:last-child {
-                border-bottom: solid 10px $green;
+                border-right: solid 10px $green;
                 margin-right: 0;
+                grid-area: post3;
+                img {
+                    float: left;
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+                .blogPostDesc {
+                    float: right;
+                    width: 50%;
+                }
             }
         }
     }

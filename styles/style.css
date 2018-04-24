@@ -155,6 +155,7 @@ img {
 ul {
   list-style: none; }
 
+/*░░░░░ COLOURS ░░░░░*/
 .linkedIn {
   background: #00649b; }
 
@@ -176,6 +177,7 @@ ul {
 .googleplus {
   background: #cb4437; }
 
+/*░░░░░ TYPOGRAPHY ░░░░░*/
 body {
   font-family: Raleway, Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -619,22 +621,16 @@ header {
     border-bottom: 1px solid #494949; }
   .blog .blogRoll {
     margin-bottom: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row;
-    flex-flow: row; }
+    display: grid;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-template-areas: "post1 post2" "post1 post3";
+    grid-gap: 30px; }
     .blog .blogRoll .blogPost {
-      background: #343434;
-      width: calc(50% - 15px);
-      padding-bottom: 30px;
-      border-bottom: solid 10px #fbcf61;
-      margin-right: 30px;
-      margin-bottom: 30px; }
-      .blog .blogRoll .blogPost img {
-        margin-bottom: 30px;
-        width: 100%; }
+      background: #343434; }
       .blog .blogRoll .blogPost .blogPostDesc {
         padding: 0 30px; }
+        .blog .blogRoll .blogPost .blogPostDesc h4 {
+          margin-top: 30px; }
         .blog .blogRoll .blogPost .blogPostDesc .blogTimeStamp {
           text-transform: uppercase;
           font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -644,16 +640,36 @@ header {
           color: #ffffff; }
         .blog .blogRoll .blogPost .blogPostDesc .blogPostSummary {
           font-size: 16px; }
+        .blog .blogRoll .blogPost .blogPostDesc .threeSocial {
+          padding-bottom: 0; }
       .blog .blogRoll .blogPost:first-child {
         -webkit-box-flex: 2;
         -ms-flex-positive: 2;
-        flex-grow: 2; }
+        flex-grow: 2;
+        grid-area: post1;
+        border-bottom: solid 10px #fbcf61; }
       .blog .blogRoll .blogPost:nth-child(2) {
-        border-bottom: solid 10px #ff6f6f;
-        margin-right: 0; }
+        border-right: solid 10px #ff6f6f;
+        margin-right: 0;
+        grid-area: post2; }
+        .blog .blogRoll .blogPost:nth-child(2) img {
+          float: left;
+          width: 50%;
+          margin-bottom: 0; }
+        .blog .blogRoll .blogPost:nth-child(2) .blogPostDesc {
+          float: right;
+          width: 50%; }
       .blog .blogRoll .blogPost:last-child {
-        border-bottom: solid 10px #a8d164;
-        margin-right: 0; }
+        border-right: solid 10px #a8d164;
+        margin-right: 0;
+        grid-area: post3; }
+        .blog .blogRoll .blogPost:last-child img {
+          float: left;
+          width: 50%;
+          margin-bottom: 0; }
+        .blog .blogRoll .blogPost:last-child .blogPostDesc {
+          float: right;
+          width: 50%; }
   .blog .button {
     color: #ffffff;
     max-width: 170px;
