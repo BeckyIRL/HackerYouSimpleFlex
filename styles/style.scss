@@ -348,3 +348,210 @@
         width: 100%;
     }
 }
+//██████████ CONTACT ██████████//
+.contact {
+    font-family: $openSans;
+    background: $gradientYellow;
+    text-align: center;
+    .contactInfo {
+        padding: 100px 0;
+        position: relative;
+        a {
+            color: $darkGrey;
+            font-weight: 700;
+            display: block;
+            &:first-of-type {
+                color: $white;
+                font-size: 40px;
+                line-height: 55px; 
+            }
+            &:nth-of-type(2) {
+                font-size: 80px;
+                border: solid 5px $white;
+                color: $darkGrey;
+                padding: 5px 60px;
+                margin: 30px 0;
+                display: inline-block;
+            }
+            &:last-of-type {
+                font-size: 30px;
+                font-weight: 300;
+            }
+        
+        }
+        .triangle {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            &:after {
+                @include triangleR;
+                border-color: $yellow transparent transparent transparent;
+            }
+            &:before {
+                @include triangleL;
+                border-color: $yellow2 transparent transparent transparent;
+            }
+        }
+    }
+    .contactMap {
+        height: 580px;
+        background-color: #FFF;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+}
+//██████████ DIRECT CONTACT ██████████//
+.directContact {
+    background: $darkGrey;
+    color: $fontLight;
+    padding: 80px 0;
+    .description {
+        &:after {
+            border-bottom: 1px solid #3a3a3a;
+        }
+    }
+    .directContactSocial {
+        text-align: center;
+        margin-bottom: 40px;
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 5px;
+                &:last-of-type {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    .directContactForm {
+        width: 53.8%;
+        max-width: 630px;
+        margin: 0 auto;
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            background: $darkGrey2;
+            border: none;
+            margin-bottom: 10px;
+            color: $fontLight;
+            padding: 20px;
+            &::placeholder {
+                text-align: center;
+            }
+            &:focus {
+                background: $gradientWhite;
+                color: $darkGrey2;
+            }
+            &:invalid {
+                background: $gradientRed;
+                border: none;
+            }
+        }
+        input[type="submit"] {
+            background: $darkGrey;
+            border: solid 4px $white;
+            color: $lightGrey;
+            padding: 20px 50px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: block;
+            margin: 0 auto;
+            color: $white;
+            margin-top: 30px;
+            &:hover {
+                background: $white;
+                color: $darkGrey;
+            }
+        }
+        input {
+            text-align: center;
+        }
+        textarea {
+            resize: none;
+            height: 200px;
+        }
+    }
+}
+//██████████ WIDGETS ██████████//
+.widgets {
+    background: $gradientWhite;
+    padding-bottom: 95px;
+    padding-top: 95px;
+    .widget {
+        width: calc(25% - 30px);
+        margin-right: 30px;
+        float: left;
+        &:last-of-type {
+            margin-right: 0px;
+        }
+        p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: $fontLight;
+        }
+    }
+    .widgetText {
+    }
+    .widgetPosts {
+        div {
+            margin-bottom: 30px;
+        p {
+            &:first-of-type {
+                color: $darkGrey;
+            }
+        }
+        img {
+            float: left;
+            margin-right: 20px;
+        }
+        }
+    }
+    .widgetNewsletter {
+        form {
+            margin-top: 15px;
+            input {
+                height: 60px;
+                display: inline-block;
+                font-size: 12px;
+            }
+            input[type=email] {
+                border: none;
+                background: #ededed;
+                margin-right: 10px;
+                width: calc(70% - 5px);
+                padding: 0 15px;
+                border: solid 4px #ededed;
+                &:invalid {
+                    background: $gradientRed;
+                    outline: none;
+                    border: solid 4px $red;
+                }
+            }
+            input[type=submit] {
+                border: none;
+                width: calc(26%);
+                background: $white;
+                color: $red;
+                border: solid $red 4px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+    .widgetFlicker {
+    }
+    
+}
+//██████████ WIDGETS ██████████//
+footer {
+    padding: 50px;
+    p {
+        text-align: center;
+        font-size: 12px;
+        color: $fontLight;
+    }
+}
