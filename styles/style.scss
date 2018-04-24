@@ -18,10 +18,10 @@
     font-size: 12px;
     text-transform: uppercase;
     display: inline-block;
-    &:hover {
-        background: $white
-    }
 }
+a.button:hover {
+        background: $white;
+    }
 a {
     color: $white;
     text-decoration: none;
@@ -32,7 +32,19 @@ a {
         @include button;
     }
 }
-
+.socialIcon {
+    color: #FFF;
+    width: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    display: block;
+    &:last-child {
+        margin-right: 0px
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 /*██████████ LAYOUT ██████████*/
 .wrapper {
     max-width: 1230px;
@@ -44,6 +56,7 @@ a {
 }
 * {
     margin: 0 0;
+    padding: 0;
 }
 /*██████████ HEADER ██████████*/
 @import "components/header";
@@ -181,4 +194,95 @@ a {
         display: block;
         margin: 0 auto;
     }
+}
+//██████████ TEAM ██████████//
+.team {
+    background: $darkGrey;
+    color: $fontLight;
+    padding: 100px 0 95px;
+    text-align: center;
+    .description {
+        &:after {
+            border-bottom: 1px solid #494949;
+        }
+    }
+    .flex {
+        flex-flow: row;
+        justify-content: space-between;
+        .teamMember {
+            max-width: 270px;
+            margin-right: 30px;
+            background: $darkGrey2;
+            border-bottom: solid 5px $red;
+            &:last-child {
+                margin-right: 0;
+            }
+            img {
+                max-width: 100%;
+            }
+            .teamSocial {
+                padding: 30px 0;
+                ul {
+                    list-style: none;
+                    max-width: 110px;
+                    margin: 0 auto;
+                    li {
+                        float: left;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//██████████ STATS ██████████//
+.stats {
+    background: $gradientGreen;
+    padding: 100px 0;
+    position: relative;
+    margin-bottom: 100px; //TEMP
+    .flex {
+        flex-flow: row;
+        justify-content: space-between;
+    .stat {
+        max-width: 270px;
+        margin-right: 30px;
+        text-align: center;
+        img {
+            max-height: 100px;
+            height: 100px;
+        }
+        .statValue {
+            font-family: $openSans;
+            font-size: 60px;
+            line-height: 55px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        .button {
+            @include button;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &:last-of-type {
+                margin-right: 0;
+            }
+    }
+    }
+    .triangle {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            &:after {
+                @include triangleR;
+                border-color: $green transparent transparent transparent;
+            }
+            &:before {
+                @include triangleL;
+                border-color: $green2 transparent transparent transparent;
+            }
+        }
 }
