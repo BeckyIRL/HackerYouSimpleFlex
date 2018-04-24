@@ -131,11 +131,29 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clear: both;
   height: 0; }
 
-/*░░░░░ BORDER-BOX ░░░░░*/
+/*░░░░░ LAYOUT ░░░░░*/
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
 
 .facebook {
   background: #507cbe; }
@@ -211,6 +229,13 @@ h3 {
   margin-bottom: 15px; }
 
 h4 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff; }
+
+h5 {
   font-size: 60px;
   line-height: 55px;
   font-weight: 700;
@@ -224,6 +249,8 @@ a {
   color: #ffffff;
   text-decoration: none; }
   a.active {
+    color: #ff6f6f; }
+  a:hover {
     color: #ff6f6f; }
   a.button {
     border: solid 4px #ffffff;
@@ -245,22 +272,19 @@ a {
   .socialIcon:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    color: #ffffff; }
 
-/*██████████ LAYOUT ██████████*/
-.wrapper {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 30px; }
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-* {
-  margin: 0 0;
-  padding: 0; }
+.threeSocial {
+  padding: 30px 0; }
+  .threeSocial ul {
+    max-width: 110px;
+    margin: 0 auto; }
+    .threeSocial ul li {
+      float: left;
+      margin-right: 10px; }
+      .threeSocial ul li:last-child {
+        margin-right: 0; }
 
 /*██████████ HEADER ██████████*/
 header {
@@ -283,7 +307,6 @@ header {
     float: right;
     padding-top: 40px; }
     .mainNav nav ul {
-      list-style: none;
       font-size: 13px; }
       .mainNav nav ul li {
         float: left;
@@ -359,7 +382,6 @@ header {
       .about .flex .aboutDetails img {
         margin: 0 auto;
         display: block;
-        max-width: 100%;
         margin-bottom: 30px; }
       .about .flex .aboutDetails p {
         font-size: 16px;
@@ -455,7 +477,6 @@ header {
   .latestProject .description:after {
     border-bottom: 1px solid #494949; }
   .latestProject img {
-    max-width: 100%;
     display: block;
     margin: 0 auto; }
 
@@ -481,19 +502,6 @@ header {
       border-bottom: solid 5px #ff6f6f; }
       .team .flex .teamMember:last-child {
         margin-right: 0; }
-      .team .flex .teamMember img {
-        max-width: 100%; }
-      .team .flex .teamMember .teamSocial {
-        padding: 30px 0; }
-        .team .flex .teamMember .teamSocial ul {
-          list-style: none;
-          max-width: 110px;
-          margin: 0 auto; }
-          .team .flex .teamMember .teamSocial ul li {
-            float: left;
-            margin-right: 10px; }
-            .team .flex .teamMember .teamSocial ul li:last-child {
-              margin-right: 0; }
 
 .stats {
   background: -webkit-gradient(linear, left top, right top, from(#a8d164), color-stop(50%, #a8d164), color-stop(50%, #a3ca61), to(#a3ca61));
@@ -502,7 +510,7 @@ header {
   background: linear-gradient(90deg, #a8d164 0%, #a8d164 50%, #a3ca61 50%, #a3ca61 100%);
   padding: 100px 0;
   position: relative;
-  margin-bottom: 100px; }
+  display: none; }
   .stats .flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -513,11 +521,9 @@ header {
     justify-content: space-between; }
     .stats .flex .stat {
       max-width: 270px;
+      width: 100%;
       margin-right: 30px;
       text-align: center; }
-      .stats .flex .stat img {
-        max-height: 100px;
-        height: 100px; }
       .stats .flex .stat .statValue {
         font-family: "Open Sans", Helvetica, Arial, sans-serif;
         font-size: 60px;
@@ -556,3 +562,99 @@ header {
       border-style: solid;
       border-width: 25px 40px 0 0px;
       border-color: #a3ca61 transparent transparent transparent; }
+
+.portfolio {
+  padding-top: 75px;
+  padding-bottom: 100px;
+  color: #989898;
+  text-align: center; }
+  .portfolio .description:after {
+    border-bottom: 1px solid #494949; }
+  .portfolio .portfolioNav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px; }
+    .portfolio .portfolioNav ul {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700; }
+      .portfolio .portfolioNav ul li {
+        display: inline-block;
+        padding-right: 40px; }
+        .portfolio .portfolioNav ul li:last-child {
+          padding: 0; }
+  .portfolio .flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 40px; }
+    .portfolio .flex .portfolioPiece {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      background: #ffffff;
+      width: 25%; }
+      .portfolio .flex .portfolioPiece .portfolioDesc {
+        font-weight: 700;
+        font-size: 12px;
+        color: #343434;
+        text-transform: uppercase;
+        padding: 25px 0; }
+  .portfolio .button {
+    width: 170px;
+    color: #ffffff;
+    text-align: center; }
+    .portfolio .button:hover {
+      color: #343434; }
+
+.blog {
+  background: #242424;
+  color: #989898;
+  padding: 100px 0;
+  text-align: center; }
+  .blog .description:after {
+    border-bottom: 1px solid #494949; }
+  .blog .blogRoll {
+    margin-bottom: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row; }
+    .blog .blogRoll .blogPost {
+      background: #343434;
+      width: calc(50% - 15px);
+      padding-bottom: 30px;
+      border-bottom: solid 10px #fbcf61;
+      margin-right: 30px;
+      margin-bottom: 30px; }
+      .blog .blogRoll .blogPost img {
+        margin-bottom: 30px;
+        width: 100%; }
+      .blog .blogRoll .blogPost .blogPostDesc {
+        padding: 0 30px; }
+        .blog .blogRoll .blogPost .blogPostDesc .blogTimeStamp {
+          text-transform: uppercase;
+          font-family: "Open Sans", Helvetica, Arial, sans-serif;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 24px;
+          color: #ffffff; }
+        .blog .blogRoll .blogPost .blogPostDesc .blogPostSummary {
+          font-size: 16px; }
+      .blog .blogRoll .blogPost:first-child {
+        -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+        flex-grow: 2; }
+      .blog .blogRoll .blogPost:nth-child(2) {
+        border-bottom: solid 10px #ff6f6f;
+        margin-right: 0; }
+      .blog .blogRoll .blogPost:last-child {
+        border-bottom: solid 10px #a8d164;
+        margin-right: 0; }
+  .blog .button {
+    color: #ffffff;
+    max-width: 170px;
+    width: 100%; }
