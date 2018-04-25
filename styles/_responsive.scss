@@ -49,6 +49,9 @@
                 font-weight: 300;
             }
         }
+            .triangle {
+                right: 0px;
+        }
         }
     }
 }
@@ -68,6 +71,13 @@
             }
         }
     }
+    }
+    .mainHeader {
+        .slide1 {
+            img {
+                opacity: .5;
+            }
+        }
     }
 }
 @media screen and (max-width:1000px) {

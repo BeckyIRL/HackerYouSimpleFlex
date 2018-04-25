@@ -51,13 +51,15 @@ header {
         align-items: center;
         .headerIntro {
             max-width: 500px;
+            z-index: 3;
             p {
                 margin-bottom: 50px;
             }
         }
         img {
-         width: 100%;
-            display: block;
+            position: absolute;
+            right: 0;
+            width: 60%
         }
         .triangle {
             position: absolute;

@@ -344,12 +344,14 @@ header {
   -ms-flex-align: center;
   align-items: center; }
   .mainHeader .slide1 .headerIntro {
-    max-width: 500px; }
+    max-width: 500px;
+    z-index: 3; }
     .mainHeader .slide1 .headerIntro p {
       margin-bottom: 50px; }
   .mainHeader .slide1 img {
-    width: 100%;
-    display: block; }
+    position: absolute;
+    right: 0;
+    width: 60%; }
   .mainHeader .slide1 .triangle {
     position: absolute;
     bottom: 0px;
@@ -736,13 +738,11 @@ header {
   .contact .contactMap {
     height: 580px;
     background-color: #FFF;
-    overflow: hidden;
-    display: none; }
+    overflow: hidden; }
     .contact .contactMap iframe {
       width: 100%;
       height: 100%;
-      border: none;
-      overflow: hidden; }
+      border: none; }
 
 .directContact {
   background: #242424;
@@ -895,7 +895,9 @@ footer {
       padding: 5px 30px; }
     .contact .contactInfo a:last-of-type {
       font-size: 20px;
-      font-weight: 300; } }
+      font-weight: 300; }
+    .contact .contactInfo .triangle {
+      right: 0px; } }
 
 @media screen and (max-width: 1110px) {
   .widgets .widgetNewsletter form {
@@ -904,7 +906,9 @@ footer {
       width: 100%; }
     .widgets .widgetNewsletter form input[type=submit] {
       width: 100%;
-      margin-top: 30px; } }
+      margin-top: 30px; }
+  .mainHeader .slide1 img {
+    opacity: .5; } }
 
 @media screen and (max-width: 1000px) {
   .widgets {
