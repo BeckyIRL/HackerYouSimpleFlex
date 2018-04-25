@@ -1,0 +1,316 @@
+@media screen and (max-width:1130px) {
+    .header {
+        img {
+            width: 50%;
+        }
+    }
+    .blog {
+        .blogRoll {
+            grid-template-areas: "post1" "post2" "post3";
+            grid-template-columns: 100%;
+            margin: 0 auto;
+            max-width: 600px;
+            margin-bottom: 30px;
+            .blogPost {
+                &:first-child {
+            }
+            &:nth-child(2) {
+                border-right: none;
+                border-bottom: solid 10px $red;
+                img {
+                }
+                .blogPostDesc {
+                }
+            }
+            &:last-child {
+                border-right: none;
+                border-bottom: solid 10px $green;
+                img {
+                }
+                .blogPostDesc {
+                }
+            }
+                .threeSocial {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .contact {
+        .contactInfo {
+            padding: 100px 30px;
+        a {
+            &:nth-of-type(2) {
+                font-size: 40px;
+                padding: 5px 30px;
+            }
+            &:last-of-type {
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+        }
+    }
+}
+@media screen and (max-width:1110px) {
+    .widgets {
+        .widgetNewsletter {
+        form {
+            margin-top: 15px;
+            input {
+            }
+            input[type=email] {
+                width: 100%;
+            }
+            input[type=submit] {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+    }
+}
+@media screen and (max-width:1000px) {
+    .widgets {
+        display: none;
+    }
+}
+@media screen and (max-width:800px) {
+    .quote {
+    .quoteContain {
+        &:after {
+            display: none;
+        }
+        &:before {
+            display: none;
+        }
+        }
+    }
+    .mainNav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    background: $gradientWhite;
+        text-align: center;
+        padding: 15px 0;
+    img {
+        padding: 0px 0 0px 0;
+        float: none;
+        width: 18%;
+    }
+    nav {
+        float: none;
+        padding-top: 10px;
+        ul {
+            font-size: 13px;
+            li {
+                float: none;
+                display: inline-block;
+                font-size: 16px;
+                a {
+                    &.active {
+                        color: $darkGrey !important;
+                    }
+                }
+            }
+        }
+    }
+    }
+    .mainHeader {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    .slide {
+        position: relative;
+        height: inherit;
+    }
+    .slide1 {
+        align-items: center;
+        .headerIntro {
+            max-width: 100%;
+            padding: 0 30px;
+            text-align: center;
+            p {
+                padding: 0 30px;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+}
+    .about {
+    color: $fontLight;
+    padding-top: 75px;
+    padding-bottom: 100px;
+    .description {
+        &:after {
+            border-bottom: 1px solid #494949;
+        }
+    }
+    .flex {
+        flex-flow: column;
+        .aboutDetails {
+            max-width: 100%;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            img {
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 16px;
+                text-align: center;
+            }
+            &:nth-last-of-type(2){
+                border-bottom: solid 10px $red;
+            }
+            &:nth-of-type(3){
+                border-bottom: solid 10px $green;
+                margin-right: 0px;
+            }
+        }
+    }
+    
+}
+    .skills {
+    background: $darkGrey;
+    color: $fontLight;
+    padding: 100px 0 95px;
+    .description {
+        &:after {
+            border-bottom: 1px solid #3a3a3a;
+        }
+    }
+    .skillSet {
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        div {
+            max-width: 50%;
+            width: 50%;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            img {
+                margin-bottom: 30px;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+    
+}
+    .team {
+    background: $darkGrey;
+    color: $fontLight;
+    padding: 100px 0 95px;
+    text-align: center;
+    .description {
+        &:after {
+            border-bottom: 1px solid #494949;
+        }
+    }
+    .flex {
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .teamMember {
+            max-width: calc(50% - 30px);
+            width: 50%;
+            margin-right: 30px;
+            border-bottom: none;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-right: 30px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+    .directContact {
+        .directContactForm {
+        width: 85%;
+    }
+    }
+}
+@media screen and (max-width:650px) {
+    h2 {
+        font-size: 35px;
+    }
+    .mainNav {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        z-index: 5;
+        padding: 15px 0;
+    nav {
+        float: none;
+        padding-top: 10px;
+        margin: 0 auto;
+        width: 60%;
+        ul {
+            font-size: 16px;
+            li {
+                display: block;
+                font-size: 16px;
+                padding: 20px;
+                border-bottom: solid 1px #e8e8e8;
+                border-right: none;
+                a {
+                    &.active {
+                        color: $darkGrey !important;
+                    }
+                }
+            }
+        }
+    }
+    }
+    .contact {
+        .contactInfo {
+        a {
+            font-size: 20px;
+            &:first-of-type {
+                font-size: 25px;
+                line-height: 24px;
+            }
+            &:nth-of-type(2) {
+                font-size: 20px;
+            }
+            &:last-of-type {
+                font-size: 20px;
+            }
+        }
+        }
+        .contactMap {
+            height: 450px;
+        }
+    }
+    .mainHeader {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    .slide {
+        position: relative;
+        height: inherit;
+    }
+    .slide1 {
+        align-items: center;
+        .headerIntro {
+            h1 {
+                font-size: 45px
+            }
+            p {
+                padding: 0 30px;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+}
+}
