@@ -10,19 +10,34 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,400,700" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
-
+<script>
+  $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                  $('html,body').animate({
+                      scrollTop: target.offset().top
+                  }, 1000);
+                  return false;
+              }
+          }
+      });
+  });
+</script>
 <body>
-    <header>
+    <header id="header">
         <div class="mainNav">
             <div class="wrapper clear">
                 <img src="img/simpleflexLogo.png" alt="Sinmpleflex Logo">
                 <nav>
                     <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#header" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -40,7 +55,7 @@
         </div>
     </header>
     <main>
-    <section class="about wrapper">
+    <section class="about wrapper" id="about">
         <h2>About Us</h2>
             <p class="description">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
             <div class="flex">
@@ -176,7 +191,7 @@
         </div>   
         <div class="triangle"></div>
     </aside>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <h2>Our Portfolio</h2>
         <p class="description">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
         <nav class="portfolioNav">
@@ -224,7 +239,7 @@
         </div>
         <a class="button" href="#">Load More</a>
     </section>
-    <section class="blog">
+    <section id="blog" class="blog">
         <h2>Our Blog</h2>
         <p class="description">Latest from our blog, nam liber tempor cum soluta nobis eleifend option congue nihil.</p>
         <div class="blogRoll wrapper">
@@ -278,7 +293,7 @@
         </div>
         <a href="#" class="button">View All</a>
     </section> 
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contactInfo">
             <a href="tel:+915445678943">+91 544 567 8943</a>
             <a href="mailto:info@simpleflex.com">info@simpleflex.com</a>
